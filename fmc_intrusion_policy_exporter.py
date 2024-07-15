@@ -38,7 +38,7 @@ class FMC:
     def get_intrusion_policy_rules(self, policy_id):
         rules = []
         offset = 0
-        limit = 5000
+        limit = 1000
         total_rules = self.get_total_rules(policy_id)
 
         with tqdm(total=total_rules, desc="Fetching Rules", unit="rule") as pbar:
